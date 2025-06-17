@@ -75,7 +75,7 @@ Keluar dari program dan kembali ke terminal.
 
 ---
 
-## ▶️ Cara Menjalankan
+## ▶️ Syarat Menjalankan Program
 
 1. Pastikan Anda menjalankan Linux/Unix dengan akses terminal.
 2. Pastikan `figlet` sudah terpasang:
