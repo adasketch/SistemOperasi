@@ -13,7 +13,7 @@ loading_bar() {
 
 while true; do
     clear
-    figlet -f slant "Welcome mas Anjas"
+    figlet -f slant "Welcome mas Anjas" | lolcat
     echo
     echo "1. Tampilkan Kehidupan Saat Ini"
     echo "2. Tampilkan Daftar Direktori"
@@ -92,7 +92,7 @@ while true; do
         read -p "Tekan Enter untuk kembali ke menu..."
         ;;
     5)
-        echo -e "Proses sedang berjalan: [########################]"
+        loading_bar
         echo
 				echo -e "\e[1;36mWaktu Perkiraan OS Pertama Kali Diinstal\e[0m"
 
@@ -122,7 +122,22 @@ while true; do
         read -p "Tekan Enter untuk kembali ke menu..."
         ;;
     7)
-        echo "Keluar dari program."
+        clear
+
+	YELLOW='\033[1;33m'
+	RESET='\033[0m'
+
+
+	pesan="Terimakasih mas Anjas dan mas Rafid"
+	panjang=${#pesan}
+
+	# Buat garis horizontal
+	garis=$(printf '─%.0s' $(seq 1 $panjang))
+
+	# Cetak kotak
+	echo -e "${YELLOW}╭─$garis─╮"
+	echo -e "│ $pesan │"
+	echo -e "╰─$garis─╯${RESET}"
         break
         ;;
     *)
