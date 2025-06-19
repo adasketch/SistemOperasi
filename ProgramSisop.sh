@@ -94,10 +94,9 @@ while true; do
     5)
         loading_bar
         echo
-				echo -e "\e[1;36mWaktu Perkiraan OS Pertama Kali Diinstal\e[0m"
-
-    		sudo ls -lt /var/log/installer/ | tail -n +2 | awk '{print $6, $7, $8}' | head -n 1
-    		sudo stat /var/log/installer/cloud-init.log | grep Modify | awk '{print $2, $3}'
+	echo -e "\e[1;36mWaktu Perkiraan OS Pertama Kali Diinstal\e[0m"
+    	sudo ls -lt /var/log/installer/ | tail -n +2 | awk '{print $6, $7, $8}' | head -n 1
+    	sudo stat /var/log/installer/cloud-init.log | grep Modify | awk '{print $2, $3}'
         echo
         read -p "Tekan Enter untuk kembali ke menu..."
         ;;
